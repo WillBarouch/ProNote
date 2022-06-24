@@ -90,3 +90,13 @@ input {
     height: 90vh;
     width: 75%;
 }
+
+#dltoggle {
+    height: 2vh;
+    width: 2vh;
+    background-color: var(--text);
+    border-radius: 1vw;
+    margin-left: 90vw;
+    margin-top: -3.5vh;
+    position: absolute;
+}

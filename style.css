@@ -40,6 +40,7 @@ body {
     margin-top: 3vh;
     text-align: center;
     line-height: 4vh;
+    overflow: hidden;
 }
 .notebooks:hover {
     background-color: var(--foreground);

@@ -1,25 +1,32 @@
 const notes = document.getElementById("notes");
+const title = document.getElementById('title');
+window.onload=function onLoad() {
+    if (localStorage.getItem(title.value) !== null) {
+        notes.textContent = localStorage.getItem(title.value);
+    }
+}
 setInterval(
 function setTitle() {
-    document.getElementById("base").textContent = document.getElementById('title').value;
+    document.getElementById("base").textContent = title.value;
     return true
 },5)
-
-class notebook {
+setInterval(
+    function save() {
+        localStorage.setItem(notebook.name,notebook.content)
+    }, 5000
+)
+class notebookclass {
     constructor(name,content) {
         this.name = name;
         this.content = content;
     }
 }
 
-let x = new notebook(document.getElementById("base").textContent,notes.value)
+let notebook = new notebookclass(document.getElementById("base").textContent,notes.value)
 notes.addEventListener("input",updateNotebook)
 
 function updateNotebook(e) {
-    x.content = e.target.value;
-    console.log("Note " + x.name +" value updated to " + x.content)
+    notebook.content = e.target.value;
+    console.log("Note " +notebook.name +" value updated to " + notebook.content)
 }
 
-function logValue() {
-    console.log(x.content)
-}

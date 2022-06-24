@@ -12,7 +12,7 @@ class notebookclass {
     }
 }
 
-let mode = 1; //set mode to 1 (darkmode)
+let darkmode = true;
 window.onload=function onLoad() {
     /*if (localStorage.getItem(title.value) !== null) {
         notes.textContent = localStorage.getItem(title.value);
@@ -62,17 +62,17 @@ function buttonclick(e){
 dltg.addEventListener("click",dltoggle);
 
 function dltoggle() {
-    if (mode === 1) { // if darkmode is enabled
+    if (mode === true) {
         r.style.setProperty('--text', '#2E3440');
         r.style.setProperty('--background', '#ECEFF4');
         r.style.setProperty('--foreground', '#D8DEE9');
         r.style.setProperty('--midground', '#E5E9F0');
-        mode = 0;
-    } else if (mode === 0){ //if lightmode is enabled
+        darkmode = false;
+    } else if (mode === false){
         r.style.setProperty('--text', '#ECEFF4');
         r.style.setProperty('--background', '#2E3440');
         r.style.setProperty('--foreground', '#4C566A');
         r.style.setProperty('--midground', '#434C5E');
-        mode = 1;
+        mode = true;
     }
 }

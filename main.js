@@ -62,17 +62,17 @@ function buttonclick(e){
 dltg.addEventListener("click",dltoggle);
 
 function dltoggle() {
-    if (mode === true) {
+    if (darkmode === true) {
         r.style.setProperty('--text', '#2E3440');
         r.style.setProperty('--background', '#ECEFF4');
         r.style.setProperty('--foreground', '#D8DEE9');
         r.style.setProperty('--midground', '#E5E9F0');
         darkmode = false;
-    } else if (mode === false){
+    } else if (darkmode === false){
         r.style.setProperty('--text', '#ECEFF4');
         r.style.setProperty('--background', '#2E3440');
         r.style.setProperty('--foreground', '#4C566A');
         r.style.setProperty('--midground', '#434C5E');
-        mode = true;
+        darkmode = true;
     }
 }
